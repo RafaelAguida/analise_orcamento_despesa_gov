@@ -1,6 +1,9 @@
 import os
 import shutil
 import pandas as pd
+from utils import send_email
+from dotenv import load_dotenv
+load_dotenv()
 
 # Fonte dos dados - https://portaldatransparencia.gov.br/download-de-dados/orcamento-despesa
 # Dicionário de dados arquivos brutos - https://portaldatransparencia.gov.br/pagina-interna/603417-dicionario-de-dados-orcamento-da-despesa
@@ -86,4 +89,9 @@ def transformar_arquivo():
 
         print('Transformação concluida com sucesso!')
     except Exception as e:
-        print(f"Erro ao executar a transformação: {e}")
+        # Se der erro, printa a mensagem de erro e envia email
+        erro = f"Erro ao executar a transformação: {e}"
+        print(erro)
+        EMAIL_PASSWORD = os.getenv('EMAIL_PASSWORD')
+        send_email('rafaelaguida00@gmail.com', EMAIL_PASSWORD, 'rafaelaguida00@gmail.com', 'ERRO ETL - Transformação', f'{erro}')
+        raise
