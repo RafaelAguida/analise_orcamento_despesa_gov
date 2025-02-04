@@ -1,0 +1,2 @@
+arquivos_silver/lidos/*.csv filter=lfs diff=lfs merge=lfs -text
+arquivos_gold/lidos/*.csv filter=lfs diff=lfs merge=lfs -text
