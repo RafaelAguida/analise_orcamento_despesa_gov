@@ -66,6 +66,7 @@ As tabelas finais (dimensões e fato) são armazenados em arquivos_gold/processa
 
 ```bash
 etl_orcamento_despesa_gov/
+├── arquivo_power_bi/
 ├── arquivos_bronze/
 │   ├── entrada/  # Pastas zipadas baixadas no site do governo, com CVS dentro de cada uma delas
 │   ├── lidos/    # Pastas zipadas processadas
