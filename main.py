@@ -1,6 +1,6 @@
-from extracao import extrair_arquivos
-from transformacao import transformar_arquivo
-from carregamento import carregar_dados
+from scripts.extracao import extrair_arquivos
+from scripts.transformacao import transformar_arquivo
+from scripts.carregamento import carregar_dados
 
 # Main para executar todo o pipeline do ETL - Extração, transformação e carregamento
 
