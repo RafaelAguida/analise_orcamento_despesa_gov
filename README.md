@@ -103,15 +103,47 @@ Arquitetura Star Schema para modelagem dos dados
 
 ## ▶️ Como Executar
 
-1. Instale as dependências:
+Antes de começar, **certifique-se de que o Python está instalado**. Para verificar, execute:  
+```bash
+python --version
+```
+Se não estiver instalado, baixe em: https://www.python.org/downloads/
+
+1. Clone o repositório em uma nova pasta
+
+```bash
+git clone https://github.com/RafaelAguida/analise_orcamento_despesa_gov.git
+cd analise_orcamento_despesa_gov
+```
+
+2. Crie um ambiente virtual e ative
+
+```bash
+python -m venv venv
+# No Windows:
+venv\Scripts\activate
+# Se der erro, execute
+Set-ExecutionPolicy Unrestricted -Scope Process
+venv\Scripts\activate
+# No macOS/Linux:
+source venv/bin/activate
+```
+
+3. Instale as dependências
 
 ```bash
 pip install -r requirements.txt
 ```
 
-2. Configure o arquivo .env com as informações necessárias.
+4. Configure o arquivo .env com as credenciais do seu email GMAIL (precisa ser uma senha de aplicativo, senha normal nao funciona via código)
 
-3. Execute o main.py:
+5. Reset do ambiente, antes de rodar o pipeline, certifique-se de que os arquivos estejam organizados corretamente. Para isso, execute o comando abaixo
+
+```bash
+python scripts/reset_ambiente.py
+```
+
+6. Execute o main.py:
 
 ```bash
 python main.py
