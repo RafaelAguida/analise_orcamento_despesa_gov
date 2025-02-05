@@ -91,6 +91,7 @@ def carregar_dados():
         # Se der erro, printa a mensagem de erro e envia email
         erro = f"Erro ao executar o carregamento: {e}"
         print(erro)
+        EMAIL_LOGIN = os.getenv('EMAIL_LOGIN')
         EMAIL_PASSWORD = os.getenv('EMAIL_PASSWORD')
-        send_email('rafaelaguida00@gmail.com', EMAIL_PASSWORD, 'rafaelaguida00@gmail.com', 'ERRO ETL - Carregamento', f'{erro}')
+        send_email(EMAIL_LOGIN, EMAIL_PASSWORD, EMAIL_LOGIN, 'ERRO ETL - Carregamento', f'{erro}')
         raise

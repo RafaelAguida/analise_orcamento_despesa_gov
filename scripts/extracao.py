@@ -61,6 +61,7 @@ def extrair_arquivos():
         # Se der erro, printa a mensagem de erro e envia email
         erro = f"Erro ao extrair arquivos: {e}"
         print(erro)
+        EMAIL_LOGIN = os.getenv('EMAIL_LOGIN')
         EMAIL_PASSWORD = os.getenv('EMAIL_PASSWORD')
-        send_email('rafaelaguida00@gmail.com', EMAIL_PASSWORD, 'rafaelaguida00@gmail.com', 'ERRO ETL - Extração', f'{erro}')
+        send_email(EMAIL_LOGIN, EMAIL_PASSWORD, EMAIL_LOGIN, 'ERRO ETL - Extração', f'{erro}')
         raise
