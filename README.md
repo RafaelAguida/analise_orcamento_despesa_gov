@@ -105,13 +105,29 @@ Arquitetura Star Schema para modelagem dos dados
 
 ## ▶️ Como Executar
 
-Antes de começar, **certifique-se de que o Python está instalado**. Para verificar, execute:  
+Requisitos, você deve ter instalado em sua máquina: Python, alguma IDE (recomendo VSCode) e git.
+
+**Certifique-se de que o Python e Git estão instalados**. Para verificar, crie uma pasta em algum lugar, abra sua IDE, abra a pasta criada pela IDE (VSCode: file > open folder) e execute no terminal:
+
 ```bash
 python --version
 ```
+
 Se não estiver instalado, baixe em: https://www.python.org/downloads/
 
-1. Clone o repositório em uma nova pasta
+```bash
+git --version
+```
+
+Se não estiver instalado, execute no terminal:
+
+```bash
+winget install --id Git.Git -e --source winget
+```
+
+Após garantir que as ferramentas estão instaladas corretamente, execute no terminal:
+
+1. Clone o repositório na pasta criada
 
 ```bash
 git clone https://github.com/RafaelAguida/analise_orcamento_despesa_gov.git
