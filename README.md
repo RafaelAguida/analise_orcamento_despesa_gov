@@ -81,6 +81,7 @@ etl_orcamento_despesa_gov/
 │   ├── transformacao.py
 │   ├── carregamento.py
 │   ├── utils.py
+│   ├── reset_ambiente.py
 ├── notebooks_dev/      # Usados para desenvolvimento apenas
 │   ├── extracao_dev.ipynb
 │   ├── transformacao_dev.ipynb
@@ -135,7 +136,14 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-4. Configure o arquivo .env com as credenciais do seu email GMAIL (precisa ser uma senha de aplicativo, senha normal nao funciona via código)
+4. Execute este comando no **PowerShell** dentro da pasta do projeto. Depois, configure o arquivo .env com as credenciais do seu email GMAIL (precisa ser uma senha de aplicativo, senha normal nao funciona via código)
+
+```powershell
+@"
+EMAIL_LOGIN=seu_email@gmail.com
+EMAIL_PASSWORD=sua_senha_de_aplicativo
+"@ | Out-File -Encoding utf8 .env
+```
 
 5. Reset do ambiente, antes de rodar o pipeline, certifique-se de que os arquivos estejam organizados corretamente. Para isso, execute o comando abaixo
 
